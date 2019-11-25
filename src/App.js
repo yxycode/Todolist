@@ -47,12 +47,10 @@ function myReducer(state = InitialState, action){
 const myStore = createStore(myReducer);
 
 function setCurrentText(text){
-  console.log('setcurrenttext()');
   return {type: 'SET_CURRENT_TEXT', value: text};
 }
 
 function addItem(){
-  console.log('additem()');
   return {type: 'ADD_ITEM'};
 }
 
@@ -95,8 +93,6 @@ class TodoInput extends React.Component {
 }
 
 const mapStateToProps1 = (state, props) => {
-  console.log('state: ' + JSON.stringify(state));
-  console.log('props: ' + JSON.stringify(props));
   if(state.previousAction = 'ADD_ITEM'){
     return {currentText: state.currentText};
   }
